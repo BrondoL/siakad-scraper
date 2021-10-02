@@ -14,7 +14,7 @@ let npm = "";
 
 const getData = async () => {
     for (let angkatan = 16; angkatan <= 21; angkatan++) {
-        for (let jalur = 1; jalur <= 6; jalur++) {
+        for (let jalur = 0; jalur <= 6; jalur++) {
             for (let fakultas = 1; fakultas <= 8; fakultas++) {
                 for (let jurusan = 1; jurusan <= 26; jurusan++) {
                     for (let prodi = 1; prodi <= 6; prodi++) {
