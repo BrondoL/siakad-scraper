@@ -6,10 +6,16 @@ const loadDataMhs = () => {
     return datamhs;
 };
 
-const simpanDataMhs = (mhs) => {
+const simpanDataMhs = (mhs, akt, jlr, fak) => {
     let datamhs = loadDataMhs();
     datamhs = datamhs.concat(mhs);
-    fs.writeFileSync("data/datamahasiswa.json", JSON.stringify(datamhs));
+    fs.writeFileSync(
+        "data/datamahasiswa" + akt + jlr + fak + ".json",
+        JSON.stringify(datamhs)
+    );
+    console.log(
+        "Berhasil menyimpan data/mahasiswa" + akt + jlr + fak + ".json"
+    );
 };
 
 module.exports = { simpanDataMhs, loadDataMhs };
